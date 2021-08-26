@@ -1,0 +1,623 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="IGUARD We aim at revolutionizing the field of safety and security by bringing in higher and more advanced forms of safety and security technologies.
+">
+<meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+
+    <!-- Website Title -->
+    <title>IGUARD</title>
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'ss/fontawesome-all.css' %}" rel="stylesheet">
+    <link href="{% static 'css/swiper.css' %}" rel="stylesheet">
+	<link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+	<link href="{% static 'css/styles.css' %}" rel="stylesheet">
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css" integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw==" crossorigin="anonymous" />
+
+
+
+<script src="https://kit.fontawesome.com/5002aa33ad.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="{% static 'images/iguardlogo.png' %}">
+
+
+
+     <style type="text/css">
+
+
+
+/* Logo */
+
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Open Sans:400,600,800');
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+input,
+p,
+a {
+    font-family: "Open Sans";
+    margin: 0px;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+}
+
+{% comment %} body {
+    background-color: #F1F2F3;
+} {% endcomment %}
+
+.container-fluid,
+.container {
+    max-width: 1200px;
+}
+
+.card-container {
+    padding: 100px 0px;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
+
+
+.profile-card-2 {
+    max-width: 300px;
+    background-color: #FFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.profile-card-2 img {
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-name {
+    position: absolute;
+    left: 30px;
+    bottom: 70px;
+    font-size: 15px;
+    color: #FFF;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-icons {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color: #FFF;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-username {
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    color: #FFF;
+    font-size: 13px;
+    transition: all linear 0.25s;
+}
+
+.profile-card-2 .profile-icons .fa {
+    margin: 5px;
+}
+
+.profile-card-2:hover img {
+    filter: grayscale(100%);
+}
+
+.profile-card-2:hover .profile-name {
+    bottom: 80px;
+}
+
+.profile-card-2:hover .profile-username {
+    bottom: 60px;
+}
+
+.profile-card-2:hover .profile-icons {
+    right: 40px;
+}
+
+h1,h2 {
+  font-weight: 200;
+  margin: 0.4em 0;
+}
+h1 { font-size: 3.5em; }
+h2 {
+  color: #888;
+  font-size: 2em;
+}
+
+.ml3 {
+  font-weight: 900;
+  font-size: 35px;
+  color:white;
+}
+
+#callme{
+    position:fixed;
+    right:160px;
+    bottom:15px;
+    width:60px;
+    height:60px;
+    cursor:pointer;
+    z-index:555;
+
+}
+
+  * {box-sizing: border-box}
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+.card:hover{
+				/*transition: width 1s, height 1s, transform 1s;*/
+				transform: rotate(360deg);
+     			transform: scale(1.05);
+  				box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+			}
+
+
+
+
+
+
+		
+
+
+
+
+     #mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+}  
+#boxes .window {
+  position:absolute;
+  left:0;
+  top:0;
+  width:440px;
+  height:200px;
+  display:none;
+  z-index:9999;
+  padding:20px;
+  border-radius: 15px;
+  text-align: center;
+}
+#boxes #dialog {
+  width:450px; 
+  height:auto;
+  padding:10px;
+  background-color:#ffffff;
+  font-family: 'Segoe UI Light', sans-serif;
+  font-size: 15pt;
+}
+.maintext{
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  text-decoration: none;
+}
+
+}
+#popupfoot{
+  font-family: "Segoe UI", sans-serif;
+  font-size: 16pt;
+  padding: 10px 20px;
+}
+#popupfoot a{
+  text-decoration: none;
+}
+.agree:hover{
+  background-color: #D1D1D1;
+}
+.popupoption:hover{
+  background-color:#D1D1D1;
+  color: green;
+}
+.popupoption2:hover{
+  
+  color: red;
+}
+
+
+#boxes input{
+        width: 100%;
+        height: 45px;
+        padding: 0 10px;
+        border: 1px solid #e2e2e2;
+        {% comment %} margin-bottom: 10px; {% endcomment %}
+      }
+      #boxes input:focus{
+        outline: #ff5722;
+        border-color: #ff5722 !important;
+      } 
+ 
+
+
+    </style>
+ 
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    
+
+      <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+    
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+        <!-- Text Logo - Use this if you don't have a graphic logo -->
+         {% comment %} <a class="navbar-brand logo-text page-scroll" href="index.html"><b><h1 style="font-size:30px; color:white;">
+  <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "IGUARD.", "IGUARD ITM." ]'></span>
+</b></h1>
+</a>  {% endcomment %}
+
+     <a class="navbar-brand logo-image" href="index.html"><img src="{%static 'images/iguardlogo.png' %}" alt="alternative" style="height:25px;width:30px;"></a>
+
+<a class="navbar-brand logo-text page-scroll" href="index.html"><h3 class="ml3" style="font-size: .8em; color:white;">IGUARD TALENT MENTORS</h3>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+<script type="text/javascript">
+	// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script></a>
+
+
+
+        <!-- Image Logo -->
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-awesome fas fa-bars"></span>
+            <span class="navbar-toggler-awesome fas fa-times"></span>
+        </button>
+        <!-- end of mobile menu toggle button -->
+
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#about">About</a>
+                </li>
+            <!-- Dropdown Menu -->          
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#courses"><span class="item-text">Internships</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="#projects"><span class="item-text">Academic Projects</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="#workshop"><span class="item-text">Workshops</span></a>
+                   {% comment %} <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">WEBINAR</span></a>
+                   <div class="dropdown-items-divide-hr"></div>
+                        <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">SEMINAR</span></a>
+                    {% endcomment %}
+                    </div>
+                </li>
+                <!-- end of dropdown menu -->
+
+                <li class="nav-item">
+                    <a class="nav-link page-scroll" href="#contact">Contact</a>
+                </li>
+            </ul>
+            <span class="nav-item social-icons">
+                <span class="fa-stack">
+                    <a href="https://www.facebook.com/iguardmentors/">
+                        <span class="hexagon"></span>
+                        <i class="fab fa-facebook-f fa-stack-1x"></i>
+                    </a>
+                </span>
+                <span class="fa-stack">
+                    <a href="https://www.instagram.com/iguard_talent_mentors/">
+                        <span class="hexagon"></span>
+                        <i class="fab fa-instagram fa-stack-1x"></i>
+                    </a>
+                </span>
+            </span>
+        </div>
+    </nav> <!-- end of navbar -->
+    <!-- end of navbar -->
+
+
+
+        {% block content %}
+
+
+
+
+
+
+        {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="text-container about">
+                        <h4>Few Words About Iguard</h4>
+                        <p class="white">
+iGuard Talent Mentors aims to offer updated job training that cater the needs of growing industries, whose trends remains dynamic from time to time.</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-md-2">
+                   
+
+                <div class="col-md-2">
+                    <div class="text-container">
+                        <h4>Partners</h4>
+                        <ul class="list-unstyled li-space-lg">
+                            <li>
+                                <a class="white" href="#your-link">iGuard.com</a>
+                            </li>
+                            <li>
+                                <a class="white" href="#your-link">Sysol.com</a>
+                            </li>
+                            
+                        </ul>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © 2021 </p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
+    
+   
+
+    
+    	
+    <!-- Scripts -->
+    <script src="{% static 'js/jquery.min.js' %}"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="{% static 'js/popper.min.js' %}"></script> <!-- Popper tooltip library for Bootstrap -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script> <!-- Bootstrap framework -->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="{% static 'js/swiper.min.js' %}"></script> <!-- Swiper for image and text sliders -->
+    <script src="{% static 'js/jquery.magnific-popup.js' %}"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="{% static 'js/morphext.min.js' %}"></script> <!-- Morphtext rotating text in the header -->
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script> <!-- Isotope for filter -->
+    <script src="{% static 'js/validator.min.js' %}"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="{% static 'js/scripts.js' %}"></script> <!-- Custom scripts -->
+
+
+     <!-- GetButton.io widget -->
+<script type="text/javascript">
+    (function () {
+                            
+        var options = {
+            call: "9048486045", // Call phone number
+            call_to_action: "", // Call to action
+            position: "left", // Position may be 'right' or 'left'
+        };
+        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+
+<!-- GetButton.io widget -->
+<script type="text/javascript">
+    (function () {
+        var options = {
+            whatsapp: "9048486045", // WhatsApp number
+            call_to_action: "", // Call to action
+            position: "right", // Position may be 'right' or 'left'
+            pre_filled_message: "Course Enq:", // WhatsApp pre-filled message
+        };
+        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+<!-- /GetButton.io widget -->
+<!-- /GetButton.io widget -->
+</body>
+</html>

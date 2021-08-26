@@ -1,0 +1,688 @@
+ {% extends 'iapp/themes.html' %} 
+
+ {% load static %}
+
+ <style>
+
+.profile-card-2:hover{
+				/*transition: width 1s, height 1s, transform 1s;*/
+				transform: rotate(360deg);
+     			transform: scale(1.05);
+  				box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+			}
+
+
+
+
+  
+     
+
+</style>
+
+
+
+
+ {% block content %}
+
+
+
+     <div id="boxes">
+
+
+
+ 
+
+{% comment %} <form method="POST">
+{% csrf_token %}
+
+
+
+      <div style="top: 199.5px; left: 551.5px; display: none;" id="dialog" class="window"> <img src="{% static 'images/iguardlogo.png'%}">
+    <input type="text" placeholder="Name" name="name">
+    <input type="text" placeholder="Email" name="email">
+    <input type="text" placeholder="Phone" name="phone">
+    
+      <a class=" btn btn-primary close agree"style="color:white;font-size:11px;margin-top:527px;margin-right:170px;" href="#" >Register</a> 
+
+    
+
+
+</form> {% endcomment %}
+      <div style="top: 199.5px; left: 551.5px; display: none;" id="dialog" class="window"> <img style="height:250px;" src="{% static 'images/iguardlogo.png'%}">
+
+
+<div class="card-body">
+                <h5 class="card-title text-center">Register</h5>
+                <form class="form-signin" method="POST">{% csrf_token %}
+                  <div class="form-label-group">
+                    <input type="text" id="inputUserame" class="form-control" placeholder="Username" name="name" required autofocus>
+                    
+                  </div>
+    
+                  <div class="form-label-group">
+                    <input type="text" id="inputEmail" class="form-control" placeholder="Email address" name="email" required>
+                 
+                  </div>
+                  
+              
+    
+                  <div class="form-label-group">
+                    <input type="text" id="phone" class="form-control" placeholder="Phone" name="phone" required>
+            
+                  </div>
+                  
+                  
+                
+                  {% comment %} <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button> {% endcomment %}
+      <a class=" btn btn-primary close agree"style="color:white;font-size:11px;margin-top:495px;margin-right:170px;" href="#" >Register</a> 
+                 
+                
+                </form>
+              </div>
+
+
+
+  </div>
+  <div style="width: 1478px; font-size: 32pt; color:white; height: 602px; display: none; opacity: 0.8;" id="mask"></div>
+</div>
+                
+    
+    
+
+  
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script>
+  
+
+  $(document).ready(function() {  
+
+    var id = '#dialog';
+  
+    //Get the screen height and width
+    var maskHeight = $(document).height();
+    var maskWidth = $(window).width();
+  
+    //Set heigth and width to mask to fill up the whole screen
+    $('#mask').css({'width':maskWidth,'height':maskHeight});
+    
+    //transition effect   
+    $('#mask').fadeIn(500); 
+    $('#mask').fadeTo("slow",0.9);  
+  
+    //Get the window height and width
+    var winH = $(window).height();
+    var winW = $(window).width();
+              
+    //Set the popup window to center
+    $(id).css('top',  winH/2-$(id).height()/2);
+    $(id).css('left', winW/2-$(id).width()/2);
+  
+    //transition effect
+    $(id).fadeIn(2000);   
+  
+  //if close button is clicked
+  $('.window .close').click(function (e) {
+    //Cancel the link behavior
+    e.preventDefault();
+    
+    $('#mask').hide();
+    $('.window').hide();
+  });   
+  
+  //if mask is clicked
+  $('#mask').click(function () {
+    $(this).hide();
+    $('.window').hide();
+  });   
+  
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- Header -->
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-container">
+                            {% comment %} <h1>WELCOME TO IGUARD <span id="js-rotating"> ITM, NETWORKING, SOLUTIONS</span></h1> {% endcomment %}
+                            <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+                                <h1>IGUARD HAVE
+                                <span
+                                    class="txt-rotate"
+                                    data-period="2000"
+                                    data-rotate='[ "PYTHON.", "DJANGO.", "FLUTTER.", "JAVA.", "PHP!" ]'></span>
+                                </h1>
+
+
+                                            <script type="text/javascript">
+                                                
+                                                var TxtRotate = function(el, toRotate, period) {
+                                            this.toRotate = toRotate;
+                                            this.el = el;
+                                            this.loopNum = 0;
+                                            this.period = parseInt(period, 10) || 2000;
+                                            this.txt = '';
+                                            this.tick();
+                                            this.isDeleting = false;
+                                            };
+
+                                            TxtRotate.prototype.tick = function() {
+                                            var i = this.loopNum % this.toRotate.length;
+                                            var fullTxt = this.toRotate[i];
+
+                                            if (this.isDeleting) {
+                                                this.txt = fullTxt.substring(0, this.txt.length - 1);
+                                            } else {
+                                                this.txt = fullTxt.substring(0, this.txt.length + 1);
+                                            }
+
+                                            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+                                            var that = this;
+                                            var delta = 300 - Math.random() * 100;
+
+                                            if (this.isDeleting) { delta /= 2; }
+
+                                            if (!this.isDeleting && this.txt === fullTxt) {
+                                                delta = this.period;
+                                                this.isDeleting = true;
+                                            } else if (this.isDeleting && this.txt === '') {
+                                                this.isDeleting = false;
+                                                this.loopNum++;
+                                                delta = 500;
+                                            }
+
+                                            setTimeout(function() {
+                                                that.tick();
+                                            }, delta);
+                                            };
+
+                                            window.onload = function() {
+                                            var elements = document.getElementsByClassName('txt-rotate');
+                                            for (var i=0; i<elements.length; i++) {
+                                                var toRotate = elements[i].getAttribute('data-rotate');
+                                                var period = elements[i].getAttribute('data-period');
+                                                if (toRotate) {
+                                                new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                                                }
+                                            }
+                                            // INJECT CSS
+                                            var css = document.createElement("style");
+                                            css.type = "text/css";
+                                            css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+                                            document.body.appendChild(css);
+                                            };
+
+
+
+                                            Resources
+                                            </script>
+                                            <p class="p-heading p-large">
+                We aim at revolutionizing the field of safety and security by bringing in higher and more advanced forms of safety and security technologies.</p>
+                                            <a class="btn-solid-lg page-scroll" onclick="document.getElementById('id01').style.display='block'" href="#intro">Register</a>
+
+                                            {% comment %} <button onclick="document.getElementById('id01').style.display='block'">Sign Up</button> {% endcomment %}
+
+                                       
+
+                            <div id="id01" class="modal">
+                                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal"></span>
+                                    <form class="modal-content" action="">
+                                        <div class="container">
+
+                                         <div id="login-box">
+                                                    <div class="left">
+                                                        <h1>Sign up</h1>
+                                                        
+                                                        <input type="text" name="name" placeholder="Name" />
+                                                        <input type="text" name="email" placeholder="E-mail" />
+                                                        <input type="text" name="phone" placeholder="Phone" />
+                                                        <input type="text" name="qualification" placeholder="Qualification" />
+                                                        
+                                                        
+                                                        <input type="submit" class="btn btn-primary" name="signup_submit" value="REGISTER" />
+                                                        {% comment %} <input type="submit" class="btn btn-primary" name="signup_submit" value="CANCEL" /> {% endcomment %}
+                                                        <a href="{% url 'index' %}" class="btn btn-primary">CANCEL</a>
+
+                                                    </div>
+                                                    
+                                                    
+                                                    </div>
+                                        </div>
+                                        </div>
+                                    </form>
+                                    </div>
+                        </div>
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+
+
+
+     <!-- About -->
+    <div id="about" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                {% for about in about %}
+                    <div class="text-container">
+                        <div class="section-title">ABOUT</div>
+                        <h2>We Offer The Best Courses for You</h2>
+                        
+                        <p>{{ about.about }}</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                {% endfor %}
+                <div class="col-lg-7">
+                    {% comment %} <div class="image-container">
+                        <img class="img-fluid" src="{{ about.image.url }}" alt="alternative" style="width:100%;height:450px;">
+                    </div> <!-- end of image-container -->
+                    {% comment %} {% endfor %} {% endcomment %} 
+
+                     
+
+
+
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                        {% for carousal in carousal %}
+                            <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}">
+                            <img src="{{ carousal.image.url }}" class="d-block" alt="..." style="width:500px;height:300px;">
+                            </div>
+                            {% endfor %} 
+                        
+                        </div>
+                    </div>
+
+                    
+
+
+                    
+
+                      
+    
+
+
+
+
+
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of about -->
+    
+    
+    
+        <!-- Services -->
+    <div id="courses" class="cards-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">INTERNSHIPS</div>
+                    <h2>Choose The Course Package<br> That Suits Your Needs</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+            {% for photo in photos %}
+
+                <div class="col-md-3">
+
+
+                <!-- Card -->
+                    
+                    <div class="profile-card-2"><img src="{{ photo.image.url }}" class="img img-responsive" style="height:325px;width:100%;">
+                        <div class="profile-name" value="{{ photo.id }}" style="color:black;">{{ photo.name }}</div>
+                        <div class="profile-username" style="color:black;">Duration: {{ photo.description }}</div>
+                        {% comment %} <div class="profile-icons" style=""><a href="https://wa.me/918129853438"><i class="fa fa-whatsapp fa-2x" style="color:green;margin-top:25px;"></i></a></div> {% endcomment %}
+                        <a href="{% url 'photo' photo.id %}" class="btn btn-outline-dark btn-sm btn-block m-0 text-primary" style="text-decoration:none;">Details</a>
+                    </div>
+                    <!-- end of card -->
+                
+                
+                </div>
+                {% endfor %}
+            
+            
+            </div>
+        </div>
+    </div>
+
+    
+                       
+     <!-- Academic projects -->
+    <div id="projects" class="cards-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">ACADEMIC PROJECTS</div>
+                    <h2>Choose The Course Package<br> That Suits Your Needs</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+               <div class="row">
+            {% for project in project %}
+
+                <div class="col-md-3">
+
+
+                <!-- Card -->
+
+
+                    <div class="card border border-dark">
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="..." style="height:250px;width:100%;">
+                        <div class="card-body">
+                            <h6 class="card-title" >{{ project.name }}</h6>
+                            <p class="card-text">{{ project.description }}</p>
+                        {% comment %} <div class="profile-icons text-right"><a href="https://wa.me/918129853438"><i class="fa fa-whatsapp fa-2x" style="color:green;"></i></a></div> {% endcomment %}
+
+                        </div>
+                        </div>
+                        <!-- end of card -->
+                
+                
+                </div>
+                {% endfor %}
+            
+            
+            </div>
+        </div>
+    </div>
+                    
+                    
+    <!-- end of projects -->
+
+    <!-- Workshops -->
+    <div id="workshop" class="cards-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">WORKSHOPS</div>
+                    <h2>Choose The Course Package<br> That Suits Your Needs</h2>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+            {% for workshop in workshop %}
+               <div class="col-md-3">
+
+
+                <!-- Card -->
+               
+
+                    <div class="card border border-dark">
+                        <img src="{{ workshop.image.url }}" class="card-img-top" alt="..." style="height:250px;width:100%;">
+                        <div class="card-body">
+                            <h6 class="card-title" >{{ workshop.name }}</h6>
+                            <p class="card-text">{{ workshop.description }}</p>
+                        {% comment %} <div class="profile-icons text-right"><a href="https://wa.me/918129853438"><i class="fa fa-whatsapp fa-2x" style="color:green;"></i></a></div> {% endcomment %}
+
+                        </div>
+                        </div>
+                    <!-- end of card -->
+                
+                
+                </div>
+                {% endfor %}
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of cards-2 -->
+    <!-- end of workshop -->
+
+
+
+     <!-- Testimonials -->
+    <div class="slider">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2>Read Our Students Testimonials</h2>
+                    <p class="p-heading">Our Students are our partners and we can not imagine a better future for our company without helping them reach their objectives</p>
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-3 text-center" style="margin-left:450px;">
+
+                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                         {% for feedback in feedback %} 
+                            <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}">
+                            <img src="{{ feedback.image.url }}" class="d-block img-fluid" alt="..." style="width:100%;height:180px;border-radius:50%;">
+                            <div class="card-body"><p>{{ feedback.feedback }}</p></div>
+                            </div>
+                            {% endfor %} 
+                        
+                        </div>
+                    </div>
+
+
+
+                </div> <!-- end of col -->
+     
+
+                </div> <!-- end of col --> 
+                
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of slider -->
+    <!-- end of testimonials -->
+
+
+
+
+    <!-- Call Me -->
+     <div id="callMe" class="form-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <div class="section-title">CALL ME</div>
+                        <h2 class="white">Have Us Contact You By Filling And Submitting The Form</h2>
+                        <p class="white">You are just a few steps away from a personalized offer. Just fill in the form and send it to us and we'll get right back with a call to help you decide what service package works.</p>
+                        <ul class="list-unstyled li-space-lg white">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">It's very easy just fill in the form so we can call</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">During the call we'll require some info about the company</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body">Don't hesitate to email us for any questions or inquiries</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                   
+                    <!-- Call Me Form -->
+                    <form  data-toggle="validator" data-focus="false" method="POST" action="{% url 'index' %}">
+                    {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" class="form-control-input" id="lname" name="name1" required>
+                            <label class="label-control" for="name">Name</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control-input" id="lphone" name="phone" required>
+                            <label class="label-control" for="phone">Phone</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control-input" id="lemail" name="email" required>
+                            <label class="label-control" for="email">Email</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            {% comment %} <input type="text" class="form-control-input" id="interest" name="interest" required>
+                            <label class="label-control" for="interest">Interested in </label> {% endcomment %}
+                            <select name="category" class="form-control-file" id="interest" class="form-control-input" style="border: 1px solid #39728f;
+	background-color: #2a5d77;
+	color: #fff;height:47px;border: 1px solid #39728f;
+	background-color: #2a5d77;
+	color: #fff; border-radius:2px;font-size: 15px;">
+                            <option value='none'>&nbsp;&nbsp;&nbsp;&nbsp;Interested in</option>
+
+
+                        {% for course in course %}
+
+                            <option value='{{photo.id}}'>{{ course.name }}</option>
+
+
+                        {% endfor %}
+                        
+                        </select>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        
+                        <div class="form-group checkbox white">
+                            <input type="checkbox" id="lterms" value="Agreed-to-Terms" name="lterms" required>I agree with Iguard's stated Privacy Policy and Terms & Conditions
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">CALL ME</button>
+                        </div>
+                        <div class="form-message">
+                            <div id="lmsgSubmit" class="h3 text-center hidden"></div>
+                        </div>
+                    </form>
+                    <!-- end of call me form -->
+                    
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of form-1 -->
+    <!-- end of call me -->
+
+
+    <!-- Contact -->
+    <div id="contact" class="form-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <div class="section-title">CONTACT</div>
+                        <h2>Get In Touch Using The Form</h2>
+                        <p>You can stop by our office for a cup of coffee and just use the contact form below for any questions and inquiries</p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="address"><i class="fas fa-map-marker-alt"></i>Kinfra park,Calicut,Kerala,India</li>
+                            <li><i class="fas fa-phone"></i><a href="tel:
+092490 09600">
+092490 09600</a></li>
+                            <li><i class="fas fa-phone"></i><a href="tel:
+092490 09600">
+092490 09600</a></li>
+                            <li><i class="fas fa-envelope"></i><a href="info@iguardsolution.com">info@iguardsolution.com</a></li>
+                        </ul>
+                        <h3>Follow iGUARD On Social Media</h3>
+
+                        <span class="fa-stack">
+                            <a href="https://www.facebook.com/iguardmentors/">
+                                <span class="hexagon"></span>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <span class="hexagon"></span>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                       
+                        <span class="fa-stack">
+                            <a href="https://www.instagram.com/iguard_talent_mentors/">
+                                <span class="hexagon"></span>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <span class="hexagon"></span>
+                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
+                            </a>
+                        </span>
+                       
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    
+                    <!-- Contact Form -->
+                    <form data-toggle="validator" data-focus="false" method="POST" action="{% url 'index' %}">
+                    {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" class="form-control-input" id="name" name="cname" required>
+                            <label class="label-control" for="name">Name</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control-input" id="cemail" name="cemail" required>
+                            <label class="label-control" for="cemail">Email</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control-textarea" id="cmessage" name="cmessage" required></textarea>
+                            <label class="label-control" for="cmessage">Your message</label>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I agree with Iguard's stated Privacy Policy and Terms Conditions
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
+                        </div>
+                        <div class="form-message">
+                            <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+                        </div>
+                    </form>
+                    <!-- end of contact form -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of form-2 -->
+    <!-- end of contact -->
+
+
+
+
+    
+    
+    
+
+
+
+ {% endblock %}
